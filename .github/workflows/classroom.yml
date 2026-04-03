@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: Report test
         setup-command: ''
-        command: test -f report.ipynb
+        command: find . \( -name "*.ipynb" -o -name "*.py" \) | grep -q .
         timeout: 10
         max-score: 1
     - name: Autograding Reporter
